@@ -66,7 +66,7 @@ def threat_changes(last_edt, new_edt, change_file):
 
     with open(change_file, "a") as f:
         if changed:
-            f.write(arrow.now().format("\nddd DD MMM YY à hh:mm", locale="fr_FR"))
+            f.write(arrow.now().format("\n" + DATE_FORM, locale="fr_FR"))
         if deleted:
             f.write("\n\tCours supprimés:")
             for i in deleted:
